@@ -1,0 +1,18 @@
+from pathlib import Path
+import pickle
+
+class RFAgent:
+    def __init__(self, model_path: Path, encoder_path: Path):
+        # Load RandomForest model
+        with open(model_path, "rb") as f:
+            self.model = pickle.load(f)
+        # Load label encoder
+        with open(encoder_path, "rb") as f:
+            self.le = pickle.load(f)
+
+    def run(self, X):
+        """
+        Predict and return decoded labels for X.
+        """
+        preds_enc = self.model.predict(X)
+        return self.le.inverse_transform(preds_enc)

@@ -1,0 +1,39 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environments
+.env
+.venv
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+
+# Data and outputs
+data/raw/
+data/processed/processed_*.csv
+!data/processed/processed_diagnosed_cbc_data.csv
+output/
+logs/
+reports/
+
+# Temporary / generated files
+*.csv
+*.npy
+*.png
+*.pdf
+*.zip
+*.json
+*.pkl
+
+# Tests & temporary scripts
+test.py
+Schedule.docx
+pytest_cache/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/

@@ -1,0 +1,27 @@
+experiment_name: calibration
+seed: 42
+
+data:
+  path: data/processed/small_dataset.csv
+  target_col: label
+  val_split: 0.2
+  test_split: 0.2
+
+federation:
+  num_clients: 3
+  num_rounds: 5
+  aggregator: ensemble
+  model: xgb
+
+metrics:
+  save_csv: output/federated_metrics_calib.csv
+
+calibration:
+  enabled: true
+  method: temperature
+  bins: 15
+  val_split: 0.2
+
+logging:
+  out_dir: output/
+  save_models: true

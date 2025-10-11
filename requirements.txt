@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+tensorflow
+matplotlib
+flower
+jupyter
+xgboost
+lightgbm
+tensorflow
+scikit-learn
+pandas
+numpy

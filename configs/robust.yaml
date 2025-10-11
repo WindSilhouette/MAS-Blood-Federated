@@ -1,0 +1,22 @@
+experiment_name: robust
+seed: 42
+
+data:
+  path: data/processed/small_dataset.csv
+  target_col: label
+  val_split: 0.2
+  test_split: 0.2
+
+federation:
+  num_clients: 3
+  num_rounds: 5
+  aggregator: robust
+  model: xgb
+
+calibration:
+  enabled: true
+  method: temperature
+  bins: 15
+
+logging:
+  out_dir: output/
